@@ -2,19 +2,16 @@ import { useState } from 'react'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  // const [count, setCount] = useState(0)
 
-  const [name, setName] = useState('')
-
-  let name ='';
-  function updateName (event){
-    name = event.target.value
-  }
+  const [name, setName] = useState('Luna')
 
   return (
     <>
-    <p>{name}</p>
-    <input value = {name} onChange
+
+    <h1>Hej. Mit navn er {name}</h1>
+    <button onClick={() => setName('Kasper')}>Send en hilsen til Kasper</button>
+
     </>
   )
 }
